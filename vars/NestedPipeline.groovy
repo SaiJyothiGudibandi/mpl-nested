@@ -8,17 +8,14 @@ def call(body) {
 
     // Executing the pipeline without additional configuration
     pipeline {  // Declarative pipeline
-        stages {
-            stage( 'Checkout' ) {
-                MPLModule()
-            }
-            stage( 'Build' ) {
-                MPLModule()
-            }
-            stage( 'Test' ) {
-                MPLModule()
-            }
+        stage('Checkout') {
+            MPLModule()
         }
-
+        stage('Build') {
+            MPLModule()
+        }
+        stage('Test') {
+            MPLModule()
+        }
     }
 }
